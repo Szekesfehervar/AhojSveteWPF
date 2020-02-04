@@ -13,5 +13,7 @@ namespace AhojSveteWPF
     /// </summary>
     public partial class App : Application
     {
+
     }
+
 }

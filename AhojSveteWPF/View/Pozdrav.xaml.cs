@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -25,16 +26,15 @@ namespace AhojSveteWPF
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void button1_MouseEnter(object sender, MouseEventArgs e)
         {
-            if (Hello.IsChecked == true)
-            {
-                MessageBox.Show("Hello.");
-            }
-            else if (Bye.IsChecked == true)
-            {
-                MessageBox.Show("Goodbye.");
-            }
+            int RanWidth = Convert.ToInt32(Gridos.ActualWidth - button1.Width);
+            int RanHeight = Convert.ToInt32(Gridos.ActualHeight - button1.Height);
+            Random rand = new Random();
+            button1.Margin = new Thickness(rand.Next(RanWidth), rand.Next(RanHeight), 0, 0);
+            DoubleAnimation animLeft = new DoubleAnimation(Canvas.GetLeft(button1), new Duration(TimeSpan.FromSeconds(1)));
+            DoubleAnimation animTop = new DoubleAnimation(Canvas.GetTop(button1), new Duration(TimeSpan.FromSeconds(1)));
         }
+
     }
 }

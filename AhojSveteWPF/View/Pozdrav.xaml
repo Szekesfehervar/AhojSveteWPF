@@ -6,12 +6,15 @@
         xmlns:local="clr-namespace:AhojSveteWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TextBlock x:Name="mujTextBlock" HorizontalAlignment="Center" Height="18" Text="Select a message option and then choose the Display button." TextWrapping="Wrap" VerticalAlignment="Center" Width="332"/>
-        <RadioButton x:Name="Hello" Content="Hello" HorizontalAlignment="Left" Margin="234,289,0,0" VerticalAlignment="Top" IsChecked="True"/>
-        <RadioButton x:Name="Bye" Content="Bye" HorizontalAlignment="Left" Margin="528,289,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="Tlačenka" Content="Button" HorizontalAlignment="Center" Height="62" Margin="0,342,0,0" VerticalAlignment="Top" Width="168" Click="Button_Click"/>
-
-
+    <Grid x:Name="Gridos">
+        <Button Content="Klikni na mě ty kluku" 
+                Height="23" 
+                HorizontalAlignment="Left" 
+                Margin="0,0,0,0" 
+                Name="button1" 
+                Width="175" 
+                MouseEnter="button1_MouseEnter" 
+                IsTabStop="False"/>
+        
     </Grid>
 </Window>
