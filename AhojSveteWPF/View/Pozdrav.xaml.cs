@@ -32,8 +32,6 @@ namespace AhojSveteWPF
             int RanHeight = Convert.ToInt32(Gridos.ActualHeight - button1.Height);
             Random rand = new Random();
             button1.Margin = new Thickness(rand.Next(RanWidth), rand.Next(RanHeight), 0, 0);
-            DoubleAnimation animLeft = new DoubleAnimation(Canvas.GetLeft(button1), new Duration(TimeSpan.FromSeconds(1)));
-            DoubleAnimation animTop = new DoubleAnimation(Canvas.GetTop(button1), new Duration(TimeSpan.FromSeconds(1)));
         }
 
     }

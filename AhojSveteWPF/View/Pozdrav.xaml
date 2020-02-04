@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:AhojSveteWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid x:Name="Gridos">
         <Button Content="Klikni na mě ty kluku" 
                 Height="23" 
@@ -14,7 +15,8 @@
                 Name="button1" 
                 Width="175" 
                 MouseEnter="button1_MouseEnter" 
-                IsTabStop="False"/>
-        
+                IsTabStop="False"
+                Background="HotPink"/>
+
     </Grid>
 </Window>
